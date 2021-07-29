@@ -4,14 +4,11 @@ set -eo pipefail
 
 flutter create flutter_app
 
-mv -f "proto/"/* "./"
-
-
 # Define variables
 OUT=flutter_app/lib/proto
 MARS=mars
 PROTO=proto
-THIRD_PARTY=third_party
+THIRD_PARTY=flutterproto/third_party
 COSMOS_VERSION="0.42.7"
 
 ## Download the Protobuf files
@@ -33,11 +30,6 @@ done
 #  $(find "${dir}" -maxdepth 1 -name '*.proto')
 #done
 
-
-mkdir "proto/$MARS"
-mv -f "$MARS"/* "proto/$MARS/"
-
-rm -rf "$MARS"
 
 proto_dirs=$(find "$PROTO" -path -prune -o -name '*.proto' -print0 | xargs -0 -n1 dirname | sort | uniq)
 for dir in $proto_dirs; do

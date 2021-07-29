@@ -10,9 +10,9 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'types.pb.dart' as $5;
-import '../../google/protobuf/timestamp.pb.dart' as $3;
-import 'validator.pb.dart' as $4;
+import 'types.pb.dart' as $6;
+import '../../google/protobuf/timestamp.pb.dart' as $4;
+import 'validator.pb.dart' as $5;
 
 enum Evidence_Sum {
   duplicateVoteEvidence, 
@@ -96,21 +96,21 @@ class Evidence extends $pb.GeneratedMessage {
 
 class DuplicateVoteEvidence extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DuplicateVoteEvidence', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tendermint.types'), createEmptyInstance: create)
-    ..aOM<$5.Vote>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'voteA', subBuilder: $5.Vote.create)
-    ..aOM<$5.Vote>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'voteB', subBuilder: $5.Vote.create)
+    ..aOM<$6.Vote>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'voteA', subBuilder: $6.Vote.create)
+    ..aOM<$6.Vote>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'voteB', subBuilder: $6.Vote.create)
     ..aInt64(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'totalVotingPower')
     ..aInt64(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'validatorPower')
-    ..aOM<$3.Timestamp>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', subBuilder: $3.Timestamp.create)
+    ..aOM<$4.Timestamp>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', subBuilder: $4.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
   DuplicateVoteEvidence._() : super();
   factory DuplicateVoteEvidence({
-    $5.Vote? voteA,
-    $5.Vote? voteB,
+    $6.Vote? voteA,
+    $6.Vote? voteB,
     $fixnum.Int64? totalVotingPower,
     $fixnum.Int64? validatorPower,
-    $3.Timestamp? timestamp,
+    $4.Timestamp? timestamp,
   }) {
     final _result = create();
     if (voteA != null) {
@@ -152,26 +152,26 @@ class DuplicateVoteEvidence extends $pb.GeneratedMessage {
   static DuplicateVoteEvidence? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $5.Vote get voteA => $_getN(0);
+  $6.Vote get voteA => $_getN(0);
   @$pb.TagNumber(1)
-  set voteA($5.Vote v) { setField(1, v); }
+  set voteA($6.Vote v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasVoteA() => $_has(0);
   @$pb.TagNumber(1)
   void clearVoteA() => clearField(1);
   @$pb.TagNumber(1)
-  $5.Vote ensureVoteA() => $_ensure(0);
+  $6.Vote ensureVoteA() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $5.Vote get voteB => $_getN(1);
+  $6.Vote get voteB => $_getN(1);
   @$pb.TagNumber(2)
-  set voteB($5.Vote v) { setField(2, v); }
+  set voteB($6.Vote v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasVoteB() => $_has(1);
   @$pb.TagNumber(2)
   void clearVoteB() => clearField(2);
   @$pb.TagNumber(2)
-  $5.Vote ensureVoteB() => $_ensure(1);
+  $6.Vote ensureVoteB() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $fixnum.Int64 get totalVotingPower => $_getI64(2);
@@ -192,34 +192,34 @@ class DuplicateVoteEvidence extends $pb.GeneratedMessage {
   void clearValidatorPower() => clearField(4);
 
   @$pb.TagNumber(5)
-  $3.Timestamp get timestamp => $_getN(4);
+  $4.Timestamp get timestamp => $_getN(4);
   @$pb.TagNumber(5)
-  set timestamp($3.Timestamp v) { setField(5, v); }
+  set timestamp($4.Timestamp v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasTimestamp() => $_has(4);
   @$pb.TagNumber(5)
   void clearTimestamp() => clearField(5);
   @$pb.TagNumber(5)
-  $3.Timestamp ensureTimestamp() => $_ensure(4);
+  $4.Timestamp ensureTimestamp() => $_ensure(4);
 }
 
 class LightClientAttackEvidence extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'LightClientAttackEvidence', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'tendermint.types'), createEmptyInstance: create)
-    ..aOM<$5.LightBlock>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'conflictingBlock', subBuilder: $5.LightBlock.create)
+    ..aOM<$6.LightBlock>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'conflictingBlock', subBuilder: $6.LightBlock.create)
     ..aInt64(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'commonHeight')
-    ..pc<$4.Validator>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'byzantineValidators', $pb.PbFieldType.PM, subBuilder: $4.Validator.create)
+    ..pc<$5.Validator>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'byzantineValidators', $pb.PbFieldType.PM, subBuilder: $5.Validator.create)
     ..aInt64(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'totalVotingPower')
-    ..aOM<$3.Timestamp>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', subBuilder: $3.Timestamp.create)
+    ..aOM<$4.Timestamp>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', subBuilder: $4.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
   LightClientAttackEvidence._() : super();
   factory LightClientAttackEvidence({
-    $5.LightBlock? conflictingBlock,
+    $6.LightBlock? conflictingBlock,
     $fixnum.Int64? commonHeight,
-    $core.Iterable<$4.Validator>? byzantineValidators,
+    $core.Iterable<$5.Validator>? byzantineValidators,
     $fixnum.Int64? totalVotingPower,
-    $3.Timestamp? timestamp,
+    $4.Timestamp? timestamp,
   }) {
     final _result = create();
     if (conflictingBlock != null) {
@@ -261,15 +261,15 @@ class LightClientAttackEvidence extends $pb.GeneratedMessage {
   static LightClientAttackEvidence? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $5.LightBlock get conflictingBlock => $_getN(0);
+  $6.LightBlock get conflictingBlock => $_getN(0);
   @$pb.TagNumber(1)
-  set conflictingBlock($5.LightBlock v) { setField(1, v); }
+  set conflictingBlock($6.LightBlock v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasConflictingBlock() => $_has(0);
   @$pb.TagNumber(1)
   void clearConflictingBlock() => clearField(1);
   @$pb.TagNumber(1)
-  $5.LightBlock ensureConflictingBlock() => $_ensure(0);
+  $6.LightBlock ensureConflictingBlock() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $fixnum.Int64 get commonHeight => $_getI64(1);
@@ -281,7 +281,7 @@ class LightClientAttackEvidence extends $pb.GeneratedMessage {
   void clearCommonHeight() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.List<$4.Validator> get byzantineValidators => $_getList(2);
+  $core.List<$5.Validator> get byzantineValidators => $_getList(2);
 
   @$pb.TagNumber(4)
   $fixnum.Int64 get totalVotingPower => $_getI64(3);
@@ -293,15 +293,15 @@ class LightClientAttackEvidence extends $pb.GeneratedMessage {
   void clearTotalVotingPower() => clearField(4);
 
   @$pb.TagNumber(5)
-  $3.Timestamp get timestamp => $_getN(4);
+  $4.Timestamp get timestamp => $_getN(4);
   @$pb.TagNumber(5)
-  set timestamp($3.Timestamp v) { setField(5, v); }
+  set timestamp($4.Timestamp v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasTimestamp() => $_has(4);
   @$pb.TagNumber(5)
   void clearTimestamp() => clearField(5);
   @$pb.TagNumber(5)
-  $3.Timestamp ensureTimestamp() => $_ensure(4);
+  $4.Timestamp ensureTimestamp() => $_ensure(4);
 }
 
 class EvidenceList extends $pb.GeneratedMessage {
